@@ -48,12 +48,12 @@ public class TrainControllerImpl implements TrainController {
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;
 		Timer timer = new Timer();
-		timer.schedule(new TimerTask() {
+		timer.scheduleAtFixedRate(new TimerTask() {
 			@Override
 			public void run() {
 				followSpeed();
 			}
-		}, 1000, 1000);
+		}, 100, 100);
 	}
 
 	@Override
