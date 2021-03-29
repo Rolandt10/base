@@ -47,7 +47,6 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;
-		this.step = joystickPosition;
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 			@Override
